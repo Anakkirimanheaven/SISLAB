@@ -15,9 +15,9 @@
                         @csrf
                         <div class="mb-2">
                             <label for="">Nama Merk</label>
-                            <input type="text" class="form-control @error('merk') is-invalid @enderror"
-                                name="merk">
-                            @error('merk')
+                            <input type="text" class="form-control @error('nama_merk') is-invalid @enderror"
+                                name="nama_merk">
+                            @error('nama_merk')
                             <span class="invalid-feedback" role="alert">
                                 <strong>{{ $message }}</strong>
                             </span>

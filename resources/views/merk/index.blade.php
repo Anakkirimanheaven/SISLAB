@@ -38,11 +38,7 @@
                                                 class="btn btn-sm btn-success">
                                                 Edit
                                             </a>
-                                            <a href="{{route('merk.show',$item->id)}}"
-                                                class="btn btn-sm btn-warning">
-                                                Show
-                                            </a>
-
+                                            
                                             <button class="btn btn-sm btn-danger" type="submit"
                                                 onclick="return confirm('Apakah Anda yakin ingin menghapus data ini?')">
                                                 Delete

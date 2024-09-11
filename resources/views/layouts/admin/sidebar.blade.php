@@ -108,5 +108,23 @@
               </a>
             </li>
           </ul>
+        <ul class="menu-sub">
+            <li class="menu-item">
+              <a
+                href="{{ route('ruangan.index')}}"
+                class="menu-link">
+                <div data-i18n="ruangan">Ruangan</div>
+              </a>
+            </li>
+          </ul>
+          <ul class="menu-sub">
+            <li class="menu-item">
+              <a
+                href="{{ route('pbarang.index')}}"
+                class="menu-link">
+                <div data-i18n="peminjaman.barang">Peminjaman Barang</div>
+              </a>
+            </li>
+          </ul>
       </li>
   </aside>

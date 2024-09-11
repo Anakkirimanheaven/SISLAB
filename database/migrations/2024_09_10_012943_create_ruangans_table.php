@@ -14,6 +14,10 @@ return new class extends Migration
         Schema::create('ruangans', function (Blueprint $table) {
             $table->id();
             $table->timestamps();
+            $table->string('nama_ruangan');
+            $table->string('nama_pic');
+            $table->integer('jml_komputer');
+            $table->integer('jml_leptop');
         });
     }
 

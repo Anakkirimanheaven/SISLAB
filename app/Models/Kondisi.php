@@ -10,4 +10,9 @@ class Kondisi extends Model
     use HasFactory;
     protected $fillable = ['id', 'kondisi'];
     public $timestamps = true;
+
+    public function kondisi()
+    {
+        return $this->hasMany(Kondisi::class, 'id_kondisi');
+    }
 }

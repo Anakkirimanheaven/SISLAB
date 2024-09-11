@@ -4,6 +4,8 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\KondisiController;
 use App\Http\Controllers\MerkController;
 use App\Http\Controllers\BarangController;
+use App\Http\Controllers\RuanganController;
+use App\Http\Controllers\PbarangController;
 
 
 /*
@@ -24,6 +26,8 @@ Route::get('/', function () {
 Route::resource('kondisi', KondisiController::class);
 Route::resource('merk', MerkController::class);
 Route::resource('barang', BarangController::class);
+Route::resource('ruangan', RuanganController::class);
+Route::resource('pbarang', PbarangController::class);
 
 Auth::routes();
 
