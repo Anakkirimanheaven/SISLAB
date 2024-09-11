@@ -6,6 +6,7 @@ use App\Http\Controllers\MerkController;
 use App\Http\Controllers\BarangController;
 use App\Http\Controllers\RuanganController;
 use App\Http\Controllers\PbarangController;
+use App\Http\Controllers\LbarangController;
 
 
 /*
@@ -28,6 +29,7 @@ Route::resource('merk', MerkController::class);
 Route::resource('barang', BarangController::class);
 Route::resource('ruangan', RuanganController::class);
 Route::resource('pbarang', PbarangController::class);
+Route::resource('lbarang', LbarangController::class);
 
 Auth::routes();
 

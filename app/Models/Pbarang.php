@@ -12,6 +12,11 @@ class Pbarang extends Model
     protected $fillable = ['id', 'nama_peminjam', 'email', 'instansi', 'id_barang', 'id_ruangan', 'tanggal_peminjaman', 'keterangan', 'id_kondisi', 'dokumentasi'];
     public $timestamp = true;
 
+    public function pbarang()
+    {
+        return $this->hasMany(Pbarang::class, 'id_pbarang');
+    }
+
     public function barang()
     {
         return $this->belongsTo(Barang::class, 'id_barang');

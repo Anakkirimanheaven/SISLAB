@@ -52,7 +52,7 @@ class PbarangController extends Controller
         if ($request->hasFile('dokumentasi')) {
             $img = $request->file('dokumentasi');
             $name = rand(1000, 9999) . $img->getClientOriginalName();
-            $img->move('/images/pbarang/', $name);
+            $img->move('public/images/pbarang/', $name);
             $pbarang->dokumentasi = $name;
         }
 
