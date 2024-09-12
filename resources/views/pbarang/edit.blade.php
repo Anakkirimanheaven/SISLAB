@@ -10,7 +10,7 @@
                         style="float: right">Kembali</a>
                 </div>
                 <div class="card-body">
-                    <form action="{{route('peminjamanbarang.store')}}" method="post">
+                    <form action="{{route('pbarang.update')}}" method="post">
                         @method('PUT')
                         @csrf
                         <div class="mb-2">

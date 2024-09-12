@@ -30,6 +30,7 @@
                                     <th>Keterangan</th>
                                     <th>ID Kondisi</th>
                                     <th>Dokumentasi</th>
+                                    <th>Aksi</th>
                                 </tr>
                             </thead>
                             @php $no = 1; @endphp

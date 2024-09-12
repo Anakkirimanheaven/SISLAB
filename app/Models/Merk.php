@@ -12,4 +12,8 @@ class Merk extends Model
     protected $fillable = ['id', 'nama_merk'];
     public $timestamps = true;
 
+    public function merk()
+    {
+        return $this->hasMany(Merk::class, 'id_merk');
+    }
 }

@@ -24,12 +24,16 @@
                         </div>
                         <div class="mb-2">
                             <label for="">ID Merk</label>
-                            <input type="text" class="form-control @error('id_merk') is-invalid @enderror"
-                                name="id_merk">
-                            @error('id_merk')
-                            <span class="invalid-feedback" role="alert">
-                                <strong>{{ $message }}</strong>
-                            </span>
+                            <select class="form-control @error('nama_merk') is-invalid @enderror" name="nama_merk">
+                                <option value="">Pilih Merk</option>
+                                @foreach ($merk as $data)
+                                    <option value="{{ $data->id }}">{{ $data->nama_merk }}</option>
+                                @endforeach
+                            </select>
+                            @error('nama_merk')
+                                <span class="invalid-feedback" role="alert">
+                                    <strong>{{ $message }}</strong>
+                                </span>
                             @enderror
                         </div>
                         <div class="dropdown">
@@ -61,12 +65,16 @@
                         </div>
                         <div class="mb-2">
                             <label for="">ID Kondisi</label>
-                            <input type="text" class="form-control @error('id_kondisi') is-invalid @enderror"
-                                name="id_kondisi">
-                            @error('id_kondisi')
-                            <span class="invalid-feedback" role="alert">
-                                <strong>{{ $message }}</strong>
-                            </span>
+                            <select class="form-control @error('kondisi') is-invalid @enderror" name="kondisi">
+                                <option value="">Pilih Kondisi</option>
+                                @foreach ($kondisi as $data)
+                                    <option value="{{ $data->id }}">{{ $data->kondisi }}</option>
+                                @endforeach
+                            </select>
+                            @error('kondisi')
+                                <span class="invalid-feedback" role="alert">
+                                    <strong>{{ $message }}</strong>
+                                </span>
                             @enderror
                         </div>
                         <div class="mb-2">

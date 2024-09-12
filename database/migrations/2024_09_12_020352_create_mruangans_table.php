@@ -6,17 +6,14 @@ use Illuminate\Support\Facades\Schema;
 
 return new class extends Migration
 {
-    /**
-     * Run the migrations.
-     */
     public function up(): void
     {
-        Schema::create('lbarangs', function (Blueprint $table) {
+        Schema::create('mruangans', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('id_pbarang')->onDelete('cascade');
+            $table->foreignId('id_ruangan')->onDelete('cascade');
+            $table->string('jenis_perbaikan');
+            $table->string('waktu_pengerjaan');
             $table->foreignId('kondisi')->onDelete('cascade');
-            $table->string('dokumentasi');
-            $table->string('keterangan');
             $table->timestamps();
         });
     }
@@ -26,6 +23,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('lbarangs');
+        Schema::dropIfExists('mruangans');
     }
 };

@@ -7,6 +7,7 @@ use App\Models\Barang;
 use App\Models\Kondisi;
 use App\Models\Ruangan;
 use Illuminate\Http\Request;
+use Storage;
 
 class PbarangController extends Controller
 {
@@ -57,7 +58,7 @@ class PbarangController extends Controller
         }
 
         $pbarang->save();
-        return redirect()->route('pbarang.index')->with('success', 'Peminjaman Berhasil Ditambah');
+        return redirect()->route('pbarang.index')->with('success', 'Peminjaman Berhasil Dibuat');
     }
 
     public function edit($id)

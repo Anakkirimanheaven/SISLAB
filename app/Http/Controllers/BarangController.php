@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use App\Models\Barang;
+use App\Models\Merk;
+use App\Models\Kondisi;
 use Illuminate\Http\Request;
 
 class BarangController extends Controller
@@ -15,7 +17,10 @@ class BarangController extends Controller
 
     public function create()
     {
-        return view('barang.create');
+        $barang = Barang::all();
+        $merk = Merk::all();
+        $kondisi = Kondisi::all();
+        return view('barang.create', compact('barang', 'merk', 'kondisi'));
     }
 
     public function store(Request $request)
@@ -31,9 +36,9 @@ class BarangController extends Controller
 
         $barang =  new Barang();
         $barang->nama_barang = $request->nama_barang;
-        $barang->id_merk = $request->id_merk;
+        $barang->nama_merk = $request->nama_merk;
         $barang->ruangan = $request->ruangan;
-        $barang->id_kondisi = $request->id_kondisi;
+        $barang->kondisi = $request->kondisi;
         $barang->posisi = $request->posisi;
         $barang->spek = $request->spek;
 
@@ -50,7 +55,9 @@ class BarangController extends Controller
     public function edit($id)
     {
         $barang = Barang::findOrFail($id);
-        return view('barang.edit', compact('barang'));
+        $merk = Merk::all();
+        $kondisi = Kondisi::all();
+        return view('barang.edit', compact('barang', 'merk', 'kondisi'));
     }
 
     public function update(Request $request, $id)

@@ -36,9 +36,9 @@
                                 <tr>
                                     <td>{{$no++}}</td>
                                     <td>{{$item ->nama_barang}}</td>
-                                    <td>{{$item ->id_merk}}</td>
+                                    <td>{{$item ->nama_merk}}</td>
                                     <td>{{$item ->ruangan}}</td>
-                                    <td>{{$item ->id_kondisi}}</td>
+                                    <td>{{$item ->kondisi}}</td>
                                     <td>{{$item ->posisi}}</td>
                                     <td>{{$item ->spek}}</td>
                                     <td>
@@ -49,7 +49,7 @@
                                                 class="btn btn-sm btn-success">
                                                 Edit
                                             </a>
-                                            
+
                                             <button class="btn btn-sm btn-danger" type="submit"
                                                 onclick="return confirm('Apakah Anda yakin ingin menghapus data ini?')">
                                                 Delete

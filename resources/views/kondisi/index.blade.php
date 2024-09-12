@@ -22,6 +22,7 @@
                                 <tr>
                                     <th>No</th>
                                     <th>Kondisi</th>
+                                    <th>Aksi</th>
                                 </tr>
                             </thead>
                             @php $no = 1; @endphp
@@ -38,7 +39,7 @@
                                                 class="btn btn-sm btn-success">
                                                 Edit
                                             </a>
-            
+
                                             <button class="btn btn-sm btn-danger" type="submit"
                                                 onclick="return confirm('Apakah Anda yakin ingin menghapus data ini?')">
                                                 Delete

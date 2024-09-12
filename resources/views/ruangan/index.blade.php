@@ -18,7 +18,7 @@
                                 <th scope="col">Nama PIC</th>
                                 <th scope="col">Jumlah komputer</th>
                                 <th scope="col">Jumlah laptop</th>
-                                <th scope="col">action</th>
+                                <th scope="col">Aksi</th>
 
                             </tr>
                         </thead>

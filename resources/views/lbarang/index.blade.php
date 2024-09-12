@@ -25,6 +25,7 @@
                                     <th>Kondisi</th>
                                     <th>Dokumentasi</th>
                                     <th>Keterangan</th>
+                                    <th>Aksi</th>
                                 </tr>
                             </thead>
                             @php $no = 1; @endphp
