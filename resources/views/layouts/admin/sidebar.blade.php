@@ -144,5 +144,14 @@
               </a>
             </li>
           </ul>
+          <ul class="menu-sub">
+            <li class="menu-item">
+              <a
+                href="{{ route('lmruangan.index')}}"
+                class="menu-link">
+                <div data-i18n="lmruangan">Laporan Maintenance Ruangan</div>
+              </a>
+            </li>
+          </ul>
       </li>
   </aside>

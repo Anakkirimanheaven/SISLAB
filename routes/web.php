@@ -8,6 +8,7 @@ use App\Http\Controllers\RuanganController;
 use App\Http\Controllers\PbarangController;
 use App\Http\Controllers\LbarangController;
 use App\Http\Controllers\MruanganController;
+use App\Http\Controllers\LmruanganController;
 
 
 /*
@@ -32,6 +33,7 @@ Route::resource('ruangan', RuanganController::class);
 Route::resource('pbarang', PbarangController::class);
 Route::resource('lbarang', LbarangController::class);
 Route::resource('mruangan', MruanganController::class);
+Route::resource('lmruangan', LmruanganController::class);
 
 Auth::routes();
 

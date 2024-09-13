@@ -20,4 +20,9 @@ class Mruangan extends Model
     {
         return $this->belongsTo(Kondisi::class, 'id_kondisi');
     }
+
+    public function mruangan()
+    {
+        return $this->hasMany(Mruangan::class, 'id_mruangan');
+    }
 }
