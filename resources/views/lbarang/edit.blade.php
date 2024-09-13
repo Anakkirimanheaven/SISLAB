@@ -5,12 +5,12 @@
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
-                <div class="card-header">Data Peminjaman Barang
+                <div class="card-header">Data Laporan Barang
                     <a href="{{route('lbarang.index')}}" class="btn btn-sm btn-primary"
                         style="float: right">Kembali</a>
                 </div>
                 <div class="card-body">
-                    <form action="{{route('lbarang.update')}}" method="post">
+                    <form action="{{route('lbarang.update', $lbarang->id)}}" method="post">
                         @method('PUT')
                         @csrf
                         <div class="mb-2">
