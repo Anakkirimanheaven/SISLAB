@@ -1,7 +1,6 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\KondisiController;
 use App\Http\Controllers\MerkController;
 use App\Http\Controllers\BarangController;
@@ -26,7 +25,7 @@ use App\Http\Controllers\LmruanganController;
 Route::get('/', function () {
     return view('welcome');
 });
-Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard');
+
 
 
 Route::resource('kondisi', KondisiController::class);
