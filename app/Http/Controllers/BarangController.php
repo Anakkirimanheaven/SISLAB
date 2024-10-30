@@ -47,11 +47,6 @@ class BarangController extends Controller
         return redirect()->route('barang.index')->with('success', 'Barang Berhasil Ditambah');
     }
 
-    public function show(Barang $barang)
-    {
-        //
-    }
-
     public function edit($id)
     {
         $barang = Barang::findOrFail($id);

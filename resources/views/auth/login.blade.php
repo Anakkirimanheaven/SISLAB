@@ -6,11 +6,9 @@
         <div class="col-md-8">
             <div class="card shadow-lg border-0 bg-dark text-white">
                 <div class="card-header text-white text-center">{{ __('Log In') }}</div>
-
                 <div class="card-body">
                     <form method="POST" action="{{ route('login') }}">
                         @csrf
-
                         <div class="mb-3 row">
                             <label for="email" class="col-md-4 col-form-label text-md-end">{{ __('Email Address') }}</label>
                             <div class="col-md-6">

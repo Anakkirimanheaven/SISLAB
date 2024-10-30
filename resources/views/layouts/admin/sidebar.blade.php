@@ -1,73 +1,13 @@
 <aside id="layout-menu" class="layout-menu menu-vertical menu bg-menu-theme">
     <div class="app-brand demo">
       <a href="{{ route('home') }}" class="app-brand-link">
-        <span class="app-brand-logo demo me-1">
-          <span style="color: var(--bs-primary)">
-            <svg width="30" height="24" viewBox="0 0 250 196" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path
-                fill-rule="evenodd"
-                clip-rule="evenodd"
-                d="M12.3002 1.25469L56.655 28.6432C59.0349 30.1128 60.4839 32.711 60.4839 35.5089V160.63C60.4839 163.468 58.9941 166.097 56.5603 167.553L12.2055 194.107C8.3836 196.395 3.43136 195.15 1.14435 191.327C0.395485 190.075 0 188.643 0 187.184V8.12039C0 3.66447 3.61061 0.0522461 8.06452 0.0522461C9.56056 0.0522461 11.0271 0.468577 12.3002 1.25469Z"
-                fill="currentColor" />
-              <path
-                opacity="0.077704"
-                fill-rule="evenodd"
-                clip-rule="evenodd"
-                d="M0 65.2656L60.4839 99.9629V133.979L0 65.2656Z"
-                fill="black" />
-              <path
-                opacity="0.077704"
-                fill-rule="evenodd"
-                clip-rule="evenodd"
-                d="M0 65.2656L60.4839 99.0795V119.859L0 65.2656Z"
-                fill="black" />
-              <path
-                fill-rule="evenodd"
-                clip-rule="evenodd"
-                d="M237.71 1.22393L193.355 28.5207C190.97 29.9889 189.516 32.5905 189.516 35.3927V160.631C189.516 163.469 191.006 166.098 193.44 167.555L237.794 194.108C241.616 196.396 246.569 195.151 248.856 191.328C249.605 190.076 250 188.644 250 187.185V8.09597C250 3.64006 246.389 0.027832 241.935 0.027832C240.444 0.027832 238.981 0.441882 237.71 1.22393Z"
-                fill="currentColor" />
-              <path
-                opacity="0.077704"
-                fill-rule="evenodd"
-                clip-rule="evenodd"
-                d="M250 65.2656L189.516 99.8897V135.006L250 65.2656Z"
-                fill="black" />
-              <path
-                opacity="0.077704"
-                fill-rule="evenodd"
-                clip-rule="evenodd"
-                d="M250 65.2656L189.516 99.0497V120.886L250 65.2656Z"
-                fill="black" />
-              <path
-                fill-rule="evenodd"
-                clip-rule="evenodd"
-                d="M12.2787 1.18923L125 70.3075V136.87L0 65.2465V8.06814C0 3.61223 3.61061 0 8.06452 0C9.552 0 11.0105 0.411583 12.2787 1.18923Z"
-                fill="currentColor" />
-              <path
-                fill-rule="evenodd"
-                clip-rule="evenodd"
-                d="M12.2787 1.18923L125 70.3075V136.87L0 65.2465V8.06814C0 3.61223 3.61061 0 8.06452 0C9.552 0 11.0105 0.411583 12.2787 1.18923Z"
-                fill="white"
-                fill-opacity="0.15" />
-              <path
-                fill-rule="evenodd"
-                clip-rule="evenodd"
-                d="M237.721 1.18923L125 70.3075V136.87L250 65.2465V8.06814C250 3.61223 246.389 0 241.935 0C240.448 0 238.99 0.411583 237.721 1.18923Z"
-                fill="currentColor" />
-              <path
-                fill-rule="evenodd"
-                clip-rule="evenodd"
-                d="M237.721 1.18923L125 70.3075V136.87L250 65.2465V8.06814C250 3.61223 246.389 0 241.935 0C240.448 0 238.99 0.411583 237.721 1.18923Z"
-                fill="white"
-                fill-opacity="0.3" />
-            </svg>
-          </span>
-        </span>
-        <span class="app-brand-text demo menu-text fw-semibold ms-2">SISLAB</span>
-      </a>
+        <span class="app-brand-logo demo">
+          <img src="{{asset('assets/img/group 7.png')}}" alt="">
+       </span>
+         </a>
 
-      <a href="javascript:void(0);" class="layout-menu-toggle menu-link text-large ms-auto">
-        <i class="mdi menu-toggle-icon d-xl-block align-middle mdi-20px"></i>
+      <a href="javascript:void(0);" class="layout-menu-toggle menu-link text-large ms-auto d-block d-xl-none">
+        <i class="bx bx-chevron-left bx-sm align-middle"></i>
       </a>
     </div>
 
@@ -75,83 +15,131 @@
 
     <ul class="menu-inner py-1">
       <!-- Dashboards -->
-      <li class="menu-item active open">
+      <li class="menu-item">
+        <a
+          href="{{ route('home') }}"
+
+          class="menu-link">
+          <i class="menu-icon tf-icons bx bx-home-circle"></i>
+          <div data-i18n="Email">dasboard</div>
+
+        </a>
+      </li>
+
+
+      <!-- Apps -->
+
+
+      <!-- Pages -->
+      <li class="menu-item">
         <a href="javascript:void(0);" class="menu-link menu-toggle">
-          <i class="menu-icon tf-icons mdi mdi-home-outline"></i>
-          <div data-i18n="Dashboards">Dashboards</div>
-          <div class="badge bg-danger rounded-pill ms-auto">5</div>
+          <i class="menu-icon tf-icons bx bx-table"></i>
+          <div data-i18n="Account Settings">table</div>
         </a>
         <ul class="menu-sub">
           <li class="menu-item">
-            <a
-              href="{{ route('kondisi.index')}}"
-              class="menu-link">
-              <div data-i18n="kondisi">Kondisi</div>
+            <a href="{{ route('ruangan.index') }}" class="menu-link">
+              <div data-i18n="Account">ruangan</div>
             </a>
           </li>
+          <li class="menu-item">
+              <a href="{{ route('kategori.index') }}" class="menu-link">
+                <div data-i18n="Connections">kategori</div>
+              </a>
+            </li>
+          <li class="menu-item">
+            <a href="{{ route('merk.index') }}" class="menu-link">
+              <div data-i18n="Connections">merk</div>
+            </a>
+          </li>
+           <li class="menu-item">
+            <a href="{{ route('kondisi.index') }}" class="menu-link">
+              <div data-i18n="Connections">kondisi</div>
+            </a>
+          </li>
+          <li class="menu-item">
+              <a href="{{ route('barang.index') }}" class="menu-link">
+                <div data-i18n="Notifications">barang</div>
+              </a>
+            </li>
+            <li class="menu-item">
+              <a href="{{ route('detail_ruangan.index') }}" class="menu-link">
+                <div data-i18n="Notifications">detail ruangan</div>
+              </a>
+            </li>
         </ul>
+      </li>
+      <li class="menu-item">
+        <a href="javascript:void(0);" class="menu-link menu-toggle">
+          <i class="menu-icon tf-icons bx bx-desktop"></i>
+          <div data-i18n="Authentications">peminjaman</div>
+        </a>
         <ul class="menu-sub">
           <li class="menu-item">
-            <a
-              href="{{ route('merk.index')}}"
-              class="menu-link">
-              <div data-i18n="merk">Merk</div>
+            <a href="{{ route('pm_barang.index') }}" class="menu-link" >
+              <div data-i18n="Basic">peminjaman barang</div>
+            </a>
+          </li>
+          <li class="menu-item">
+            <a href="{{ route('pm_ruangan.index') }}" class="menu-link" >
+              <div data-i18n="Basic">peminjaman ruangan</div>
+            </a>
+          </li>
+
+        </ul>
+      </li>
+      <li class="menu-item">
+        <a href="javascript:void(0);" class="menu-link menu-toggle">
+          <i class="menu-icon tf-icons bx bx-wrench"></i>
+          <div data-i18n="Misc">maintenance</div>
+        </a>
+        <ul class="menu-sub">
+          <li class="menu-item">
+            <a href="{{ route('m_barang.index') }}" class="menu-link">
+              <div data-i18n="Error">maintenance barang</div>
+            </a>
+          </li>
+          <li class="menu-item">
+            <a href="{{ route('m_ruangan.index') }}" class="menu-link">
+              <div data-i18n="Under Maintenance"> Maintenance ruangan</div>
             </a>
           </li>
         </ul>
-        <ul class="menu-sub">
-            <li class="menu-item">
-              <a
-                href="{{ route('barang.index')}}"
-                class="menu-link">
-                <div data-i18n="barang">Barang</div>
-              </a>
-            </li>
-          </ul>
-        <ul class="menu-sub">
-            <li class="menu-item">
-              <a
-                href="{{ route('ruangan.index')}}"
-                class="menu-link">
-                <div data-i18n="ruangan">Ruangan</div>
-              </a>
-            </li>
-          </ul>
-          <ul class="menu-sub">
-            <li class="menu-item">
-              <a
-                href="{{ route('pbarang.index')}}"
-                class="menu-link">
-                <div data-i18n="peminjaman.barang">Peminjaman Barang</div>
-              </a>
-            </li>
-          </ul>
-          <ul class="menu-sub">
-            <li class="menu-item">
-              <a
-                href="{{ route('lbarang.index')}}"
-                class="menu-link">
-                <div data-i18n="lbarang">Laporan Barang</div>
-              </a>
-            </li>
-          </ul>
-          <ul class="menu-sub">
-            <li class="menu-item">
-              <a
-                href="{{ route('mruangan.index')}}"
-                class="menu-link">
-                <div data-i18n="mruangan">Maintenance Ruangan</div>
-              </a>
-            </li>
-          </ul>
-          <ul class="menu-sub">
-            <li class="menu-item">
-              <a
-                href="{{ route('lmruangan.index')}}"
-                class="menu-link">
-                <div data-i18n="lmruangan">Laporan Maintenance Ruangan</div>
-              </a>
-            </li>
-          </ul>
       </li>
+      <li class="menu-item">
+        <a href="javascript:void(0)" class="menu-link menu-toggle">
+          <i class="menu-icon tf-icons bx bx-book"></i>
+          <div data-i18n="User interface">laporan</div>
+        </a>
+        <ul class="menu-sub">
+          <li class="menu-item">
+            <a href="{{ route('l_barang.index') }}" class="menu-link">
+              <div data-i18n="Accordion">laporan peminjaman barang</div>
+            </a>
+          </li>
+          <li class="menu-item">
+            <a href="{{ route('l_ruangan.index') }}" class="menu-link">
+              <div data-i18n="Alerts">laporan peminjaman ruangan</div>
+            </a>
+          </li>
+          <li class="menu-item">
+            <a href="{{ route('lm_barang.index') }}" class="menu-link">
+              <div data-i18n="Badges">laporan maintenance barang</div>
+            </a>
+          </li>
+          <li class="menu-item">
+            <a href="{{ route('lm_ruangan.index') }}" class="menu-link">
+              <div data-i18n="Buttons">laporan maintenance ruangan</div>
+            </a>
+          </li>
+
+
+
+        </ul>
+      </li>
+      <!-- Components -->
+
+
+
+    </ul>
   </aside>

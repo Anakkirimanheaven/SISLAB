@@ -1,42 +1,36 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\KondisiController;
-use App\Http\Controllers\MerkController;
-use App\Http\Controllers\BarangController;
-use App\Http\Controllers\RuanganController;
-use App\Http\Controllers\PbarangController;
-use App\Http\Controllers\LbarangController;
-use App\Http\Controllers\MruanganController;
-use App\Http\Controllers\LmruanganController;
-
-
-/*
-|--------------------------------------------------------------------------
-| Web Routes
-|--------------------------------------------------------------------------
-|
-| Here is where you can register web routes for your application. These
-| routes are loaded by the RouteServiceProvider and all of them will
-| be assigned to the "web" middleware group. Make something great!
-|
-*/
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('auth.login');
 });
-
-
-
-Route::resource('kondisi', KondisiController::class);
-Route::resource('merk', MerkController::class);
-Route::resource('barang', BarangController::class);
-Route::resource('ruangan', RuanganController::class);
-Route::resource('pbarang', PbarangController::class);
-Route::resource('lbarang', LbarangController::class);
-Route::resource('mruangan', MruanganController::class);
-Route::resource('lmruangan', LmruanganController::class);
+Route::get('/register', [RegisterController::class, 'showRegistrationForm'])->name('register');
 
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::resource('merk', App\Http\Controllers\MerkController::class)->middleware('auth');
+Route::resource('kategori', App\Http\Controllers\KategoriController::class)->middleware('auth');
+Route::resource('ruangan', App\Http\Controllers\RuanganController::class)->middleware('auth');
+Route::resource('kondisi', App\Http\Controllers\KondisiController::class)->middleware('auth');
+Route::resource('barang', App\Http\Controllers\BarangController::class)->middleware('auth');
+Route::resource('detail_ruangan', App\Http\Controllers\DetailRuanganController::class)->middleware('auth');
+
+Route::resource('m_barang', App\Http\Controllers\MBarangController::class)->middleware('auth');
+Route::resource('m_ruangan', App\Http\Controllers\MruanganController::class)->middleware('auth');
+
+Route::resource('lm_barang', App\Http\Controllers\LmBarangController::class)->middleware('auth');
+Route::resource('lm_ruangan', App\Http\Controllers\LmRuanganController::class)->middleware('auth');
+
+Route::resource('pm_ruangan', App\Http\Controllers\PmRuanganController::class)->middleware('auth');
+Route::resource('pm_barang', App\Http\Controllers\PmBarangController::class)->middleware('auth');
+
+Route::resource('l_barang', App\Http\Controllers\LBarangController::class)->middleware('auth');
+Route::resource('l_ruangan', App\Http\Controllers\LRuanganController::class)->middleware('auth');
+
+Route::post('pm_barang/export-pm_barang', [App\Http\Controllers\PmBarangController::class, 'viewPDF'])->name('pm_barang.view-pdf');
+Route::post('pm_ruangan/export-pm_ruangan', [App\Http\Controllers\PmRuanganController::class, 'viewPDF'])->name('pm_ruangan.view-pdf');
+
+Route::post('pm_barang/cetak-pm_barang', [App\Http\Controllers\PmBarangController::class, 'viewBARANG'])->name('pm_barang.view-barang');
+Route::post('pm_ruangan/cetak-pm_ruangan', [App\Http\Controllers\PmRuanganController::class, 'viewRUANGAN'])->name('pm_ruangan.view-ruangan');
